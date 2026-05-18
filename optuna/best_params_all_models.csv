@@ -1,0 +1,11 @@
+dt_max_depth,dt_min_samples_split,dt_min_samples_leaf,dt_max_features,model,lgbm_num_leaves,lgbm_learning_rate,lgbm_n_estimators,lgbm_max_depth,lgbm_min_child_weight,lgbm_subsample,lgbm_colsample_bytree,xgb_max_depth,xgb_learning_rate,xgb_n_estimators,xgb_min_child_weight,xgb_subsample,xgb_colsample_bytree,rf_n_estimators,rf_max_depth,rf_min_samples_split,rf_min_samples_leaf,rf_max_features,et_n_estimators,et_max_depth,et_min_samples_split,et_min_samples_leaf,et_max_features,gbdt_n_estimators,gbdt_learning_rate,gbdt_max_depth,gbdt_min_samples_split,gbdt_min_samples_leaf,gbdt_subsample,gbdt_max_features,ab_n_estimators,ab_learning_rate,svm_C,svm_kernel,svm_gamma,mlp_hidden_layer_sizes,mlp_learning_rate_init,mlp_max_iter,mlp_activation,mlp_solver,lr_C,lr_solver,lr_penalty
+9.0,3.0,4.0,sqrt,DT,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,LGBM,32.0,0.030799503613771734,191.0,11.0,2.0,0.9031389481596694,0.9852220591568942,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,XGBoost,,,,,,,,3.0,0.07829594313707466,181.0,2.0,0.5611339173154151,0.7647306325446279,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,RF,,,,,,,,,,,,,,145.0,19.0,13.0,1.0,sqrt,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,ET,,,,,,,,,,,,,,,,,,,80.0,17.0,10.0,5.0,auto,,,,,,,,,,,,,,,,,,,,
+,,,,GBDT,,,,,,,,,,,,,,,,,,,,,,,,93.0,0.012590516397482817,12.0,16.0,2.0,0.8156175607291373,log2,,,,,,,,,,,,,
+,,,,AB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,94.0,0.08641161775416274,,,,,,,,,,,
+,,,,SVM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,13.664894405888987,rbf,auto,,,,,,,,
+,,,,MLP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(200,)",0.00543871155600682,337.0,tanh,adam,,,
+,,,,LR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,96.36682531712071,liblinear,l2
