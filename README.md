@@ -160,9 +160,6 @@ conda activate higgan
 # Install dependencies
 pip install -r requirements.txt
 
-# Install GROMACS (optional, for MD simulation)
-sudo apt-get install gromacs
-```
 
 ### Requirements
 
@@ -190,7 +187,6 @@ mdanalysis>=2.5.0
 | DRAMP 3.0 | Antimicrobial peptide DB | [Link](http://dramp.cpu-bioinfor.org/) |
 | CancerPPD | Cancer peptide DB | [Link](http://crdd.osdd.net/raghava/cancerppd/) |
 | PDB: 1L8C | HIF-1α structure | [Link](https://www.rcsb.org/structure/1L8C) |
-| GROMACS | MD simulation | [Link](https://www.gromacs.org/) |
 | AutoDock Vina | Molecular docking | [Link](http://vina.scripps.edu/) |
 | ToxinPred | Toxicity screening | [Link](https://webs.iiitd.edu.in/raghava/toxinpred/) |
 
@@ -216,5 +212,5 @@ NSCL Bioinformatics — [juyoungbio.com](https://juyoungbio.com/)
 
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1f35,50:0f2027,100:0d1117&height=100&section=footer&animation=fadeIn" />
-<sub>Built with PyTorch · GROMACS · AutoDock Vina · BioPython</sub>
+<sub>Built with PyTorch · AutoDock Vina · BioPython</sub>
 </div>
