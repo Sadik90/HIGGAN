@@ -180,95 +180,7 @@ mdanalysis>=2.5.0
 
 ---
 
-## 🚀 Quick Start
 
-```python
-from higgan import HIGGANGenerator, PeptideScreener
-
-# Load pre-trained generator
-generator = HIGGANGenerator.from_pretrained("models/higgan_hif1_v2.pt")
-
-# Generate 100 novel peptide candidates
-peptides = generator.generate(n=100, length_range=(8, 20), seed=42)
-
-# Screen for anticancer properties
-screener = PeptideScreener(target="HIF1_p300")
-candidates = screener.filter(
-    peptides,
-    min_acp_prob=0.80,
-    max_toxicity=0.30,
-    min_docking_score=-7.0
-)
-
-print(f"Identified {len(candidates)} high-priority candidates")
-candidates.to_csv("results/candidates.csv", index=False)
-```
-
----
-
-## 📁 Repository Structure
-
-```
-HIGGAN/
-├── 📂 data/
-│   ├── acp_positive.fasta       # Known ACP sequences (positive set)
-│   ├── non_acp.fasta            # Non-ACP sequences (negative set)
-│   └── hif1_p300_binding.csv   # Curated interface residues
-├── 📂 models/
-│   ├── generator.py             # DCGAN Generator architecture
-│   ├── discriminator.py         # DCGAN Discriminator architecture
-│   └── higgan_hif1_v2.pt        # Pre-trained model weights
-├── 📂 screening/
-│   ├── docking.py               # AutoDock Vina wrapper
-│   ├── md_simulation.py         # GROMACS MD pipeline
-│   └── toxicity.py              # Toxicity prediction pipeline
-├── 📂 analysis/
-│   ├── visualization.py         # Sequence & structure plots
-│   └── statistics.py            # Diversity & novelty metrics
-├── 📂 results/
-│   ├── top_candidates.csv       # Final screened peptides
-│   └── docking_scores.xlsx      # All docking results
-├── train.py                     # Main training script
-├── generate.py                  # Inference & generation script
-├── requirements.txt
-└── README.md
-```
-
----
-
-## 🧪 Training
-
-```bash
-# Train from scratch
-python train.py \
-  --data data/acp_positive.fasta \
-  --epochs 5000 \
-  --batch_size 64 \
-  --latent_dim 128 \
-  --lr_g 0.0001 \
-  --lr_d 0.0004 \
-  --save_every 500 \
-  --output models/
-
-# Resume training
-python train.py --resume models/checkpoint_epoch_3000.pt
-```
-
----
-
-## 📈 Evaluation Metrics
-
-HIGGAN peptides are evaluated across five axes:
-
-| Dimension | Tool / Method | Score Type |
-|-----------|--------------|------------|
-| Novelty | BLAST vs training set | % unique |
-| Diversity | Average pairwise distance | Hamming/edit |
-| ACP probability | ACPred, mACPpred | 0–1 |
-| Structural validity | ESMFold, AlphaFold2 | pLDDT |
-| Docking fitness | AutoDock Vina | kcal/mol |
-
----
 
 ## 🌐 Databases & Resources Used
 
@@ -284,38 +196,11 @@ HIGGAN peptides are evaluated across five axes:
 
 ---
 
-## 📄 Citation
 
-If you use HIGGAN in your research, please cite:
-
-```bibtex
-@article{bhattarai2024higgan,
-  title   = {HIGGAN: A DCGAN-based generative framework for designing novel 
-             anticancer peptides targeting the HIF-1/p300 interface in TNBC},
-  author  = {Bhattarai, Sadik and [Co-authors]},
-  journal = {[Journal Name]},
-  year    = {2024},
-  doi     = {10.xxxx/xxxxxx}
-}
-```
 
 ---
 
-## 🤝 Contributing
 
-Contributions are welcome! Please open an issue first to discuss proposed changes.
-
-```bash
-# Fork → clone → create branch
-git checkout -b feature/your-feature-name
-
-# Make changes, then
-git commit -m "feat: describe your change"
-git push origin feature/your-feature-name
-# Open a Pull Request
-```
-
----
 
 ## 📬 Contact
 
@@ -325,8 +210,7 @@ Jeonbuk National University, South Korea
 NSCL Bioinformatics — [juyoungbio.com](https://juyoungbio.com/)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/)
-[![Instagram](https://img.shields.io/badge/Research_Blog-Follow-E4405F?style=flat-square&logo=instagram)](https://www.instagram.com/protein_engineer/)
-[![Podcast](https://img.shields.io/badge/AI_Podcast-Listen-1DB954?style=flat-square&logo=spotify)](https://podcasters.spotify.com/pod/show/sadik-bhattarai/)
+[![Podcast](https://www.youtube.com/shorts/3J-1KkWidFs)
 
 ---
 
