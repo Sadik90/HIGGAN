@@ -1,216 +1,363 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:0f2027,100:1a1f35&height=220&section=header&text=HIGGAN&fontSize=72&fontColor=58a6ff&fontAlignY=40&desc=HIF-1%2Fp300%20Interface-Guided%20Generative%20Adversarial%20Network&descSize=15&descAlignY=62&descColor=8b949e&animation=fadeIn" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=3000&pause=1000&color=534AB7&center=true&vCenter=true&width=700&lines=Deep+Generative+AI+%C3%97+Structural+Bioinformatics+%C3%97+Molecular+Simulation;DCGAN+%E2%86%92+Docking+%E2%86%92+100+ns+MD+%E2%86%92+Half-life+Optimization;6+Lead+CPP-ACP+Candidates+%7C+Zero+Predicted+Toxicity" alt="Typing SVG" />
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&pause=1200&color=58A6FF&center=true&vCenter=true&width=700&lines=DCGAN-based+generative+framework+for+anticancer+peptides;Targeting+HIF-1%2Fp300+interface+in+TNBC;Peptide+generation+%E2%86%92+Docking+%E2%86%92+MD+Simulation+%E2%86%92+Toxicity+Screening;Identifying+stable%2C+high-affinity%2C+non-toxic+candidates" alt="Typing SVG" />
-</a>
+# Computational Discovery of Half-Life-Optimized<br>Cell-Penetrating Anticancer Peptides
 
-<br/><br/>
+**A DCGAN-based framework for de novo CPP-ACP design targeting the HIF-1/p300 interface in breast cancer**
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![BioPython](https://img.shields.io/badge/BioPython-2496ED?style=flat-square&logo=python&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Active_Research-brightgreen?style=flat-square)
-![DOI](https://img.shields.io/badge/DOI-10.xxxx%2Fxxxxxx-blue?style=flat-square)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org)
+[![DCGAN](https://img.shields.io/badge/Model-DCGAN-534AB7?style=flat-square)](.)
+[![Docking](https://img.shields.io/badge/Docking-ADCP%20%2B%20HADDOCK-D85A30?style=flat-square)](.)
+[![MD](https://img.shields.io/badge/MD-NAMD%20100ns-1D9E75?style=flat-square)](.)
+[![Leads](https://img.shields.io/badge/Lead%20Peptides-6%20Candidates-085041?style=flat-square)](.)
+[![Toxicity](https://img.shields.io/badge/Toxicity-None%20Predicted-brightgreen?style=flat-square)](.)
+[![License](https://img.shields.io/badge/License-Research-blue?style=flat-square)](.)
+
+---
+
+| Validity | Uniqueness | Lead Candidates | Predicted Toxicity |
+|:---:|:---:|:---:|:---:|
+| **100%** | **100%** | **6** | **0** |
 
 </div>
 
 ---
 
-## 🧬 Overview
+## Overview
 
-**HIGGAN** (**H**IF-1/p300 **I**nterface-**G**uided **G**enerative **A**dversarial **N**etwork) is a deep generative framework designed to produce novel anticancer peptides targeting the **HIF-1α/p300 protein–protein interaction interface** — a critical oncogenic signaling axis in **Triple-Negative Breast Cancer (TNBC)**.
+**HIF-1α** (Hypoxia-Inducible Factor 1-alpha) is a master regulator of tumor adaptation to low-oxygen environments. Its interaction with the transcriptional co-activator **p300** activates a cascade of oncogenic genes driving angiogenesis, metabolic reprogramming, and therapeutic resistance in breast cancer. This protein–protein interface (PDB: **1P4Q**) has long been considered "undruggable" by conventional small molecules.
 
-Conventional drug discovery for TNBC is constrained by the lack of targetable receptors and the undruggable nature of transcription factor interfaces. HIGGAN addresses this by leveraging **Deep Convolutional GANs** to explore the vast peptide chemical space and generate candidates that are not merely analogues of known sequences — they are *de novo* designed molecules optimized for interface disruption.
+This project presents a **Deep Convolutional Generative Adversarial Network (DCGAN)** framework that *creates entirely new peptide sequences* — Cell-Penetrating Anticancer Peptides (CPP-ACPs) — designed to disrupt this interface. Unlike virtual screening, the model generates novel sequences from scratch, followed by a rigorous multi-stage computational validation pipeline culminating in **six highly promising lead candidates**.
 
-> **Clinical motivation**: TNBC accounts for ~15–20% of all breast cancers and has the worst prognosis due to resistance to hormone therapy. Disrupting HIF-1α/p300 coactivation can suppress hypoxia-driven tumor survival and angiogenesis.
-
----
-
-## 🔬 The Biology: HIF-1/p300 Interface in TNBC
-
-```
-Hypoxic tumor microenvironment
-         ↓
-HIF-1α stabilizes → translocates to nucleus
-         ↓
-HIF-1α + p300/CBP coactivation
-         ↓
-Transcription of pro-survival, angiogenic genes
-(VEGF, GLUT1, EPO, MDR1...)
-         ↓
-Tumor growth, metastasis, therapy resistance
-```
-
-HIGGAN-generated peptides are designed to **wedge into the HIF-1α/p300 binding groove**, sterically blocking this coactivation — thereby switching off the hypoxia transcriptional program.
+> **TL;DR** — Train DCGAN on validated ACPs → generate novel CPP-ACPs → screen physicochemistry/activity/safety → dock against HIF-1/p300 → validate by 100 ns MD → optimize half-life via cholesterol conjugation → **6 non-toxic leads with favorable drug-like properties**.
 
 ---
 
-## 🏗️ Architecture
+## Biological Motivation
 
 ```
-                    ┌─────────────────────────────────┐
-                    │         HIGGAN Pipeline          │
-                    └─────────────────────────────────┘
-                                    │
-          ┌─────────────────────────┼────────────────────────┐
-          ▼                         ▼                        ▼
-  ┌───────────────┐       ┌──────────────────┐    ┌──────────────────┐
-  │  NOISE VECTOR │       │   GENERATOR (G)  │    │ DISCRIMINATOR (D)│
-  │   z ~ N(0,1)  │──────▶│  Conv Transpose  │    │  1D CNN Layers   │
-  │   latent dim  │       │  Batch Norm      │    │  Binary output   │
-  └───────────────┘       │  ReLU / Tanh     │    │  Real vs Fake    │
-                          └──────────────────┘    └──────────────────┘
-                                    │                        ▲
-                                    ▼                        │
-                          ┌──────────────────┐               │
-                          │  Generated Seq.  │───────────────┘
-                          │  (one-hot enc.)  │
-                          └──────────────────┘
-                                    │
-          ┌─────────────────────────┼────────────────────────┐
-          ▼                         ▼                        ▼
-  ┌───────────────┐       ┌──────────────────┐    ┌──────────────────┐
-  │   MOLECULAR   │       │   MD SIMULATION  │    │    TOXICITY      │
-  │    DOCKING    │       │  (GROMACS/AMBER) │    │   SCREENING      │
-  │  AutoDock Vina│       │  RMSD, RMSF,Rg   │    │ ToxinPred/PSPT   │
-  └───────────────┘       └──────────────────┘    └──────────────────┘
-          │                         │                        │
-          └─────────────────────────▼────────────────────────┘
-                          ┌──────────────────┐
-                          │  FINAL CANDIDATE │
-                          │  High affinity   │
-                          │  Low toxicity    │
-                          │  High stability  │
-                          └──────────────────┘
+         Hypoxic Tumor Environment
+                    │
+                    ▼
+          HIF-1α  Stabilization
+                    │
+                    ▼
+           Nuclear Translocation
+                    │
+                    ▼
+       HIF-1α + p300 Complex Formation          ← Our CPP-ACPs disrupt here
+                    │
+                    ▼
+   VEGF · GLUT1 · EPO · MDR1 · CA9 · LDHA
+                    │
+                    ▼
+  Angiogenesis · Tumor Survival · Metastasis
+                    │
+                    ▼
+          Breast Cancer Progression
 ```
 
 ---
 
-## 🤖 AI Workflow: From Noise to Candidate
+## Computational Pipeline
 
-### Stage 1 — Generative Adversarial Training
-
-The **Generator** learns to transform random Gaussian noise vectors into realistic amino acid sequences via transposed convolutional layers. The **Discriminator** is trained on known anticancer peptides (ACPs) from curated databases (ACPred, DRAMP, CancerPPD) and penalizes sequences that deviate from physicochemical plausibility.
-
-Training dynamics are stabilized using:
-- **Wasserstein loss with gradient penalty** (WGAN-GP)
-- **Spectral normalization** on discriminator layers
-- **Label smoothing** to prevent mode collapse
-
-### Stage 2 — Structural Filtering
-
-Generated sequences undergo:
-1. **BLAST screening** — remove near-identical natural homologs
-2. **Physicochemical profiling** — charge, hydrophobicity, amphipathicity
-3. **Secondary structure prediction** — PSIPRED, NetSurf-2
-4. **Isoelectric point & solubility assessment** — SOLpro, ProtSol
-
-### Stage 3 — Molecular Docking
-
-Top candidates are docked against the **HIF-1α CH1 domain** (PDB: 1L8C) using **AutoDock Vina**. Binding pockets are predicted with fpocket. Docking scores and hydrogen bond networks are analyzed to rank candidates.
-
-### Stage 4 — MD Simulation
-
-High-affinity docked complexes are simulated (50–100 ns) with **GROMACS** using the CHARMM36 force field. Key metrics:
-- **RMSD** — backbone stability
-- **RMSF** — per-residue flexibility
-- **Rg** (radius of gyration) — compactness
-- **MM-PBSA** — binding free energy calculation
-
-### Stage 5 — Toxicity & ADMET Screening
-
-Final candidates screened for:
-- **Hemolytic activity** (HemoPI)
-- **Cell-penetrating potential** (CPPred)
-- **General toxicity** (ToxinPred, PSPT)
-- **Drug-likeness** — Lipinski's Rule of Five adapted for peptides
+```
+  ┌──────────────────────────────────────────┐
+  │   Experimentally Validated ACP Dataset   │
+  └────────────────────┬─────────────────────┘
+                       │
+                       ▼
+          ┌────────────────────────┐
+          │     DCGAN Training     │
+          │  Generator + Discrim.  │
+          └────────────┬───────────┘
+                       │
+                       ▼
+          ┌────────────────────────┐
+          │  Novel CPP-ACP Library │
+          │  (100% valid, unique)  │
+          └────────────┬───────────┘
+                       │
+         ┌─────────────┼─────────────┐
+         ▼             ▼             ▼
+   Physicochem.   CPP & ACP     Toxicity &
+   Screening      Prediction    Hemolysis
+         │             │             │
+         └─────────────┼─────────────┘
+                       │
+                       ▼
+          ┌────────────────────────┐
+          │  ADCP CrankPep Docking │
+          │  (HIF-1/p300, 1P4Q)   │
+          └────────────┬───────────┘
+                       │
+                       ▼
+          ┌────────────────────────┐
+          │    HADDOCK Docking     │
+          │  H-bonds · vdW · Elec  │
+          └────────────┬───────────┘
+                       │
+                       ▼
+          ┌────────────────────────┐
+          │  100 ns MD Simulation  │
+          │  NAMD · RMSD · RMSF   │
+          └────────────┬───────────┘
+                       │
+                       ▼
+          ┌────────────────────────┐
+          │ Cholesterol Conjugation│
+          │  PepADMET Half-life    │
+          └────────────┬───────────┘
+                       │
+                       ▼
+     ┌─────────────────────────────────┐
+     │   6 Optimized CPP-ACP Leads     │
+     │   High affinity · Stable ·      │
+     │   Non-toxic · Extended t½       │
+     └─────────────────────────────────┘
+```
 
 ---
 
-## 📊 Key Results
+## Deep Learning Architecture
 
-| Metric | Best Candidate | Threshold |
-|--------|---------------|-----------|
-| Docking Score | −9.4 kcal/mol | < −7.0 |
-| MM-PBSA ΔG | −42.3 kJ/mol | < −30.0 |
-| RMSD (100 ns) | 1.8 Å | < 3.0 Å |
-| Toxicity Score | 0.07 | < 0.30 |
-| Hemolysis | Non-hemolytic | — |
-| ACP Probability | 0.91 | > 0.80 |
+### Generator
 
-> 🏆 **3 peptide candidates** passed all screening thresholds and are proposed for in vitro validation.
+Transforms Gaussian latent noise into novel peptide sequences by learning the distribution of experimentally validated ACPs.
+
+| Layer | Operation |
+|---|---|
+| 1 | Dense (latent → hidden) |
+| 2 | Transposed Conv1D + Batch Norm + ReLU |
+| 3 | Transposed Conv1D + Batch Norm + ReLU |
+| 4 | Transposed Conv1D + Batch Norm + ReLU |
+| 5 | Output Conv1D (one-hot channels) |
+
+### Discriminator
+
+Distinguishes real validated peptides from generated sequences.
+
+| Layer | Operation |
+|---|---|
+| 1 | Conv1D + Batch Norm + LeakyReLU |
+| 2 | Conv1D + Batch Norm + LeakyReLU |
+| 3 | Flatten → Fully Connected |
+| 4 | Sigmoid output |
+
+### Training Strategy
+
+- Deep Convolutional GAN architecture
+- Batch normalization throughout
+- Label smoothing for training stability
+- Adversarial optimization with diversity preservation
+
+**Results:** 100% validity · 100% uniqueness · High novelty · High sequence diversity
 
 ---
 
-## 💻 Installation
+## Screening Pipeline
+
+### Stage 1 — Physicochemical Characterization
+
+| Property | Criterion |
+|---|---|
+| Net charge | +2 to +7 |
+| Hydrophobicity | GRAVY score filter |
+| Amphipathicity | Helical wheel analysis |
+| Molecular weight | 1–5 kDa |
+| Isoelectric point | pI > 7 |
+
+### Stage 2 — Biological Activity Prediction
+
+- **Cell-penetrating ability** — CPPpred
+- **Anticancer activity** — ACP-ADA, iACP
+- **Anti-breast cancer activity** — specialized classifier
+
+### Stage 3 — Safety Evaluation
+
+- **Toxicity** — ToxinPred (non-toxic required)
+- **Hemolysis** — HemoPI (non-hemolytic required)
+- **Drug-likeness** — Lipinski-based filters
+
+Only high-confidence candidates passing all three stages proceed to structural analysis.
+
+---
+
+## Structural Validation
+
+### ADCP CrankPep
+
+Flexible peptide docking against the HIF-1/p300 interface (PDB: **1P4Q**) evaluated:
+
+- Binding affinity (kcal/mol)
+- Peptide conformation at the interface
+- Contact residue mapping
+
+### HADDOCK Protein–Peptide Docking
+
+Data-driven docking assessed the quality of:
+
+- Hydrogen bonding network
+- Electrostatic interactions
+- Van der Waals contacts
+- Interface buried surface area
+
+Lead peptides demonstrated **stronger interaction profiles** than reference peptides from the literature.
+
+---
+
+## Molecular Dynamics Simulation
+
+Best-ranked complexes were subjected to **100 ns all-atom MD simulations** using NAMD with the CHARMM36 force field in explicit solvent.
+
+**Trajectory analyses:**
+
+| Metric | Description |
+|---|---|
+| RMSD | Backbone stability over time |
+| RMSF | Per-residue flexibility |
+| Rg | Radius of gyration / compactness |
+| Contacts | Interface contact persistence |
+
+All six lead complexes maintained **stable binding** throughout the full 100 ns trajectory.
+
+---
+
+## Half-Life Optimization
+
+### Cholesterol Conjugation
+
+Lead peptides were cholesterol-modified at the N- or C-terminus to enhance:
+
+- Proteolytic resistance
+- Membrane anchoring and cellular uptake
+- Biological stability and circulation time
+
+### PepADMET Pharmacokinetic Prediction
+
+Half-life was predicted across three biologically relevant compartments:
+
+| Compartment | Pre-conjugation | Post-conjugation |
+|---|---|---|
+| Human blood | Baseline | **Improved** |
+| Mouse blood | Baseline | **Improved** |
+| Mouse intestine | Baseline | **Improved** |
+
+---
+
+## Key Findings
+
+| Metric | Outcome |
+|---|---|
+| Deep learning model | DCGAN |
+| Target interface | HIF-1α/p300 (PDB: 1P4Q) |
+| Generated library | Novel CPP-ACPs (100% valid, 100% unique) |
+| Docking platforms | ADCP CrankPep + HADDOCK |
+| MD simulation | NAMD — 100 ns, stable complexes confirmed |
+| Toxicity | ✅ None predicted |
+| Hemolysis | ✅ Not hemolytic |
+| Half-life | ✅ Extended via cholesterol conjugation |
+| Final lead candidates | **6 optimized CPP-ACPs** |
+
+---
+
+## Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/Sadik90/HIGGAN.git
 cd HIGGAN
 
-# Create conda environment
+# Create and activate environment
 conda create -n higgan python=3.9
 conda activate higgan
 
 # Install dependencies
 pip install -r requirements.txt
-
+```
 
 ### Requirements
 
-```txt
-torch>=2.0.0
-numpy>=1.24.0
-pandas>=2.0.0
+```text
+torch>=2.0
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
 biopython>=1.81
-scikit-learn>=1.3.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-rdkit>=2023.03.1
-mdanalysis>=2.5.0
+matplotlib>=3.7
+rdkit
+mdanalysis
 ```
 
 ---
 
+## Resources
 
-
-## 🌐 Databases & Resources Used
-
-| Resource | Purpose | Link |
-|---------|---------|------|
-| ACPred | ACP classification | [Link](http://codes.bio/acpred/) |
-| DRAMP 3.0 | Antimicrobial peptide DB | [Link](http://dramp.cpu-bioinfor.org/) |
-| CancerPPD | Cancer peptide DB | [Link](http://crdd.osdd.net/raghava/cancerppd/) |
-| PDB: 1L8C | HIF-1α structure | [Link](https://www.rcsb.org/structure/1L8C) |
-| AutoDock Vina | Molecular docking | [Link](http://vina.scripps.edu/) |
-| ToxinPred | Toxicity screening | [Link](https://webs.iiitd.edu.in/raghava/toxinpred/) |
-
----
-
-
+| Tool | Purpose |
+|---|---|
+| [APD3](https://aps.unmc.edu/AP/) | Antimicrobial/anticancer peptide database |
+| [CancerPPD](http://crdd.osdd.net/raghava/cancerppd/) | Anticancer peptide source |
+| [RCSB PDB 1P4Q](https://www.rcsb.org/structure/1P4Q) | HIF-1α/p300 complex structure |
+| [ADCP CrankPep](https://ccsb.scripps.edu/adcp/) | Flexible peptide docking |
+| [HADDOCK](https://wenmr.science.uu.nl/haddock2.4/) | Protein–peptide docking |
+| [NAMD](https://www.ks.uiuc.edu/Research/namd/) | Molecular dynamics simulation |
+| [PepADMET](https://biosig.lab.uq.edu.au/pepADMET/) | Peptide pharmacokinetics |
 
 ---
 
+## Future Work
 
+- [ ] Experimental peptide synthesis and purification
+- [ ] In vitro validation in TNBC cell lines (MDA-MB-231, BT-549)
+- [ ] In vivo pharmacokinetic and efficacy evaluation
+- [ ] Multi-objective reinforcement learning for peptide optimization
+- [ ] Clinical translation pipeline for peptide therapeutics
 
-## 📬 Contact
+---
 
-**Sadik Bhattarai**  
-PhD Scholar, Bioinformatics  
-Jeonbuk National University, South Korea  
-NSCL Bioinformatics — [juyoungbio.com](https://juyoungbio.com/)
+## Citation
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/)
-[![Podcast](https://www.youtube.com/shorts/3J-1KkWidFs)
+If you use this work, please cite:
+
+```bibtex
+@article{bhattarai2025hifgan,
+  title   = {HIFGAN: Hypoxia-Driven Non-Toxic AI-Based Anticancer Peptide Design
+             Targeting Breast Cancer HIF-1α Signaling Pathway},
+  author  = {Bhattarai, Sadik and Chong, Kil To and Tayara, Hilal},
+  journal = {Submitted},
+  year    = {2025}
+}
+```
+
+**Related publications:**
+
+> Bhattarai, S., Chong, K. T., & Tayara, H. (2025). GAN-ML: Advancing anticancer peptide prediction through innovative Deep Convolution Generative Adversarial Network data augmentation technique. *Chemometrics and Intelligent Laboratory Systems*, 262, 105390.
+
+> Bhattarai, S., Tayara, H., & Chong, K. T. (2024). Advancing peptide-based cancer therapy with AI: in-depth analysis of state-of-the-art AI models. *Journal of Chemical Information and Modeling*, 64(13), 4941–4957.
+
+> Bhattarai, S., et al. (2022). ACP-ADA: a boosting method with data augmentation for improved prediction of anticancer peptides. *International Journal of Molecular Sciences*, 23(20), 12194.
+
+---
+
+## Author
+
+**Sadik Bhattarai**
+PhD Scholar — Computational Drug Engineering
+Bioinformatics & Biomedical Engineering Lab
+Jeonbuk National University, South Korea
+
+[![Email](https://img.shields.io/badge/Email-bhattarai.sadik2009%40gmail.com-534AB7?style=flat-square&logo=gmail&logoColor=white)](mailto:bhattarai.sadik2009@gmail.com)
 
 ---
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1f35,50:0f2027,100:0d1117&height=100&section=footer&animation=fadeIn" />
-<sub>Built with PyTorch · AutoDock Vina · BioPython</sub>
+
+**Deep Learning · Structural Biology · Molecular Simulation · AI-driven Drug Discovery**
+
+*Built with PyTorch · ADCP CrankPep · HADDOCK · NAMD · PepADMET*
+
 </div>
+
+
