@@ -323,11 +323,11 @@ If you use this work, please cite:
 
 ```bibtex
 @article{bhattarai2025hifgan,
-  title   = {HIFGAN: Hypoxia-Driven Non-Toxic AI-Based Anticancer Peptide Design
-             Targeting Breast Cancer HIF-1α Signaling Pathway},
+  title   = {Computational Discovery of Half-Life-Optimized Cell-Penetrating Anticancer Peptides Using
+Deep Generative Modeling},
   author  = {Bhattarai, Sadik and Chong, Kil To and Tayara, Hilal},
   journal = {Submitted},
-  year    = {2025}
+  year    = {2026}
 }
 ```
 
@@ -345,7 +345,7 @@ If you use this work, please cite:
 
 **Sadik Bhattarai**
 PhD Scholar — Computational Drug Engineering
-Bioinformatics & Biomedical Engineering Lab
+Juyong Bio, South Korea
 Jeonbuk National University, South Korea
 
 [![Email](https://img.shields.io/badge/Email-bhattarai.sadik2009%40gmail.com-534AB7?style=flat-square&logo=gmail&logoColor=white)](mailto:bhattarai.sadik2009@gmail.com)
